@@ -1,7 +1,0 @@
-COPIA_DM_I	131	5086	full_copia	0	+	432	4661	0,0,0	1	4955	0	full_copia	cmpl	cmpl	0	none	full_copia	full_copia	none
-# COPIA_DM_I	131	5086	copia_gag	0	+	432	4661	0,0,0	2	1474,531,	0,4424,	copia_gag	cmpl	cmpl	0	none	copia_gag	copia_gag	none
-COPIA_DM_I	0	276	copia_left_ltr	0	+	0	0	0,0,0	1	276	0	copia_left_ltr	none	none	-1	none	copia_left_LTR	copia_left_LTR	none
-COPIA_DM_I	4871	5145	copia_right_ltr	0	+	4871	4871	0,0,0	1	274	0	copia_right_ltr	none	none	-1	none	copia_right_LTR	copia_right_LTR	none
-# COPIA_DM_I	131	1605	copia_gag	0	+	432	1605	0,0,0	1	1474	0	copia_gag	cmpl	cmpl	0	none	copia_gag	copia_gag	none
-# COPIA_DM_I	4555	5086	copia_gag	0	+	4555	4661	0,0,0	1	531	0	copia_gag	cmpl	cmpl	0	none	copia_gag	copia_gag	none
-COPIA_DM_I	131	5086	copia_gag	0	+	432	4661	0,0,0	2	1474,531,	0,4424,	copia_gag	cmpl	cmpl	0,0,	none	copia_gag	copia_gag	none
