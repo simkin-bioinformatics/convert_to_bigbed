@@ -1,8 +1,14 @@
-file = 'drorep_copia_annotations'
-input_bed = f'/home/charlie/Dropbox/projects/search_for_copia/custom_copia_annotations/{file}.bed'
-sorted_bed = f'/home/charlie/Dropbox/projects/search_for_copia/custom_copia_annotations/{file}_sorted.bed'
-chrom_sizes = '/home/charlie/Dropbox/projects/search_for_copia/custom_copia_annotations/copia.chrom.sizes'
-big_bed = f'/home/charlie/Dropbox/projects/search_for_copia/custom_copia_annotations/{file}.bb'
+input_bed_file = '/home/charlie/projects/splicewiz/genomes/bigGenePred_drosophila_bdg.txt'
+chrom_sizes = '/home/charlie/projects/splicewiz/genomes/drosophila_bdg.chrom.sizes'
+output_folder = '/home/charlie/projects/splicewiz/genomes/drosophila_bdg_bigbed'
+
+import os
+if not os.path.exists(output_folder):
+    os.makedirs(output_folder)
+
+file_name = input_bed_file.split('/')[-1].split('.')[0]
+sorted_bed = f'{output_folder}/{file_name}_sorted.bed'
+big_bed = f'{output_folder}/{file_name}.bb'
 
 
 rule all:
@@ -12,7 +18,7 @@ rule all:
 rule sort_bed_file:
 	#sorts the bed file alphabetically
 	input:
-		unsorted_bed = input_bed
+		unsorted_bed = input_bed_file
 	output:
 		sorted_bed = sorted_bed
 	shell:
@@ -27,4 +33,4 @@ rule make_big_bed:
 	output:
 		big_bed = big_bed
 	shell:
-		'bedToBigBed -type=bed12+8 {input.sorted_bed} {input.chrom_sizes} {output.big_bed}'
+		'bedToBigBed -type=bed12+8 -tab {input.sorted_bed} {input.chrom_sizes} {output.big_bed}'
