@@ -1,9 +1,9 @@
 # input a fasta file and a gtf file
 # output a bigbed file and a 2bit file suitable for ucsc browser annotation
 
-fasta_file = '/home/charlie/projects/genomes_and_te/Drosophila_melanogaster.BDGP6.32.fa'
-gtf_file = '/home/charlie/projects/genomes_and_te/Drosophila_melanogaster.BDGP6.32_copia.gtf'
-output_folder = '/home/charlie/projects/browserDocker/site_data/copia_bdgp6_gtf'
+fasta_file = '/home/charlie/projects/reference/genome_fastas/BDGP6.46.full.fa'
+gtf_file = '/home/charlie/projects/reference/genome_annotations/BDGP6.46.full_copia.gtf'
+output_folder = '/home/charlie/projects/dockerBrowser/site_data/BDGP6.46'
 email = 'charlie.simkin@gmail.com'
 default_position = open(fasta_file, 'r').readline().strip().split()[0].strip(">")
 
