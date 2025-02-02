@@ -3,4 +3,8 @@ channels:
   - bioconda
 dependencies:
   - ucsc-bedtobigbed
+  - ucsc-fatotwobit
+  - ucsc-gtftogenepred
+  - ucsc-genepredtobiggenepred
+  - ucsc-fasize
   - snakemake
